@@ -1,6 +1,5 @@
-package com.savelev.generator;
+package com.savelev.generator.util;
 
-import com.savelev.generator.RandomUtil;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

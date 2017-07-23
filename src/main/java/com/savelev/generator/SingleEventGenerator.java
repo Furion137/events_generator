@@ -5,6 +5,7 @@ import com.savelev.generator.enums.EventType;
 import com.savelev.generator.enums.OriginationChannel;
 import com.savelev.generator.enums.OriginationPage;
 import com.savelev.generator.enums.ServiceType;
+import com.savelev.generator.util.RandomUtil;
 
 import java.util.Date;
 import java.util.UUID;
@@ -12,26 +13,8 @@ import java.util.UUID;
 /**
  * @author Artem Savelev (Artem.Savelev@lanit-tercom.com) created on 23.07.2017 10:40.
  */
-public class EventGenerator {
+public class SingleEventGenerator {
     private static final Date UNDEFINED_TIME_STAMP = new Date(0);
-
-    public void generateEvents(int interactionNumber, int frequency) {
-        for (int i = 0; i < interactionNumber; i++) {
-            Thread thread = new Thread(new InteractionRunnable());
-            thread.start();
-            try {
-                Thread.sleep(1000/frequency);//we don't take into account time needed to run new thread
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-        try {
-            Thread.sleep(20000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        InteractionRunnable.writeToFile();
-    }
 
     public Event generateEvent(EventType eventType, Event event) {
         switch (eventType) {

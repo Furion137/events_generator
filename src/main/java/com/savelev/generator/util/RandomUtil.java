@@ -1,4 +1,4 @@
-package com.savelev.generator;
+package com.savelev.generator.util;
 
 import java.util.Random;
 

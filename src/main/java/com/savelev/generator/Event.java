@@ -15,7 +15,7 @@ import java.util.UUID;
 public class Event {
     private UUID id;
     private EventType eventType;
-    private Date eventTimeStamp;//using Date fron java.util instead of DateTime forn JodaTime
+    private Date eventTimeStamp;
     private Date createTime;
     private Date deliveryTime;
     private Date endTime;
