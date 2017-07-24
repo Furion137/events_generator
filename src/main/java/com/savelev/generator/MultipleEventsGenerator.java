@@ -59,7 +59,7 @@ public class MultipleEventsGenerator {
 
     private static void writeToFile(){
         try {
-            objectMapper.writeValue(new File("output.json"), events);
+            objectMapper.writeValue(new File("target/output.json"), events);
         } catch (Exception e) {
             e.printStackTrace();
         }
